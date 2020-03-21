@@ -1,3 +1,4 @@
+// Sets the colors for generation in the profile
 const favColor = {
   red: {
     wrapperBackground: "red",
@@ -43,6 +44,7 @@ const favColor = {
   },
 };
 
+// Function for generating/determining html/styles in the profiles 
 var profile = function (bgColor, data) {
   return `<!DOCTYPE html>
 <html lang="en">
