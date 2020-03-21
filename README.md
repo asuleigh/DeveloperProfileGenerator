@@ -30,7 +30,7 @@ i: INSTALLATION AND USAGE
 
 -Run 'node index.js' in the terminal, answer the two prompts, and watch your html and pdf pages generate!
 
-ii: CREDITS -https://www.toptal.com/designers/subtlepatterns/ -https://w3schools.com -https://getbootstrap.com/ -https://openweathermap.org/current -https://openweathermap.org/api/uvi -https://openweathermap.org/weather-conditions -https://stackoverflow.com/questions/43699606/400-bad-request-when-using-open-weather-maps-api-geo-location-call -https://staxmanade.com/2018/03/should-i-use-javascript-single-or-double-quotes/
+ii: CREDITS -https://w3schools.com -https://getbootstrap.com/ -https://openweathermap.org/current -https://staxmanade.com/2018/03/should-i-use-javascript-single-or-double-quotes/ -https://www.npmjs.com/package/inquirer -https://www.npmjs.com/package/prompts -https://www.npmjs.com/package/html-pdf -https://nodejs.org/dist/latest-v8.x/docs/api/util.html -https://www.w3schools.com/nodejs/nodejs_filesystem.asp -https://nodejs.org/api/util.html -https://www.npmjs.com/package/util
 
 iii: LICENSE GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 
