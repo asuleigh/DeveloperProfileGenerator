@@ -1,3 +1,4 @@
+// npm install requirements
 const axios= require('axios'),
     inquirer= require('inquirer'),
     fs= require('fs');
@@ -9,10 +10,12 @@ let profile= require("./profile");
 
 const writeFileAsync= util.promisify(fs.writeFile);
 
+// Array of questions prompted in terminal
 const questions = 
 ["What is your GitHub username?", 
 "What is your favorite color?"];
 
+// Function for favorite color prompt
 function questionPrompt() {
     return inquirer
     .prompt([
@@ -35,6 +38,7 @@ function questionPrompt() {
 
 }
 
+// Function for username prompt
 async function userPrompt() {
 
     const displayName= 
@@ -50,11 +54,12 @@ async function userPrompt() {
 
 }
 
+// Uses prompts to initialize new html/pdf
 async function init() {
-    const colorData = await questionPrompt();
+    const favColor = await questionPrompt();
     const data = await userPrompt();
 
-    const html = await profile.profile(colorData, data);
+    const html = await profile.profile(favColor, data);
 
     await writeFileAsync("profile.html", html);
 

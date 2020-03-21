@@ -1,9 +1,9 @@
-const colors = {
-  green: {
-    wrapperBackground: "green",
-    headerBackground: "green",
+const favColor = {
+  red: {
+    wrapperBackground: "red",
+    headerBackground: "red",
     headerColor: "white",
-    photoBorderColor: "green"
+    photoBorderColor: "red"
   },
   blue: {
     wrapperBackground: "blue",
@@ -17,12 +17,30 @@ const colors = {
     headerColor: "white",
     photoBorderColor: "pink"
   },
-  red: {
-    wrapperBackground: "red",
-    headerBackground: "red",
+  purple: {
+    wrapperBackground: "purple",
+    headerBackground: "purple",
     headerColor: "white",
-    photoBorderColor: "red"
-  }
+    photoBorderColor: "purple"
+  },
+  green: {
+    wrapperBackground: "green",
+    headerBackground: "green",
+    headerColor: "white",
+    photoBorderColor: "green"
+  },
+  orange: {
+    wrapperBackground: "orange",
+    headerBackground: "orange",
+    headerColor: "white",
+    photoBorderColor: "orange"
+  },
+  yellow: {
+    wrapperBackground: "yellow",
+    headerBackground: "yellow",
+    headerColor: "white",
+    photoBorderColor: "yellow"
+  },
 };
 
 var profile = function (bgColor, data) {
@@ -55,8 +73,8 @@ var profile = function (bgColor, data) {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        background-color: ${colors[bgColor.color].headerBackground};
-        color: ${colors[bgColor.color].headerColor};
+        background-color: ${favColor[bgColor.color].headerBackground};
+        color: ${favColor[bgColor.color].headerColor};
         width: 95%;
         border-radius: 2px;
         }
@@ -91,8 +109,8 @@ var profile = function (bgColor, data) {
         .card {
         padding: 20px;
         border-radius: 6px;
-        background-color: ${colors[bgColor.color].headerBackground};
-        color: ${colors[bgColor.color].headerColor};
+        background-color: ${favColor[bgColor.color].headerBackground};
+        color: ${favColor[bgColor.color].headerColor};
         width: 40%;
         display: inline-block;
         justify-content: center;
