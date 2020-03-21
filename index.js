@@ -12,7 +12,7 @@ inquirer
     {
         type:"list",
         message: "What is your favorite color?",
-        name:"color",
+        name:"colorChoice",
         choices:["red", "blue", "pink","purple", "green", "orange"]
     }
 ])
@@ -21,7 +21,7 @@ inquirer
     .get('https://api.github.com/users/' + input.username)
     .then(res =>{
         let avatar= "![profile](" + res.data.avatar_url +")",
-        displayName= "# <div style='color:" + input.color + ";'>" + res.data.name + "</div>",
+        displayName= "# <div style='color:" + input.colorChoice + ";'>" + res.data.name + "</div>",
         bio= "Bio: " + res.data.bio,
         repo= "Repo URL: [" + res.data.name + "'s Repo](" + res.data.html_url +")",
         publicRepos= "Public Repos: " + res.data.public_repos,
@@ -37,11 +37,11 @@ inquirer
         "\n\n" + displayOpen + followers + displayClose+"\n\n" + displayOpen + following + displayClose+ 
         "\n\n" + displayOpen + location + displayClose + "\n\n";
         
-        fs.writeFile("userProfile.md",profile, error =>{
+        fs.writeFile(res.data.name + ".md",profile, error =>{
             if(error){
                 console.log("Sorry! An Error Occured!")
-            }else {console.log("Profile Found and Being Generated!")}
-        })
-    })
+            } else {console.log("Profile Found and Being Generated!")}
+        });
+    });
 
 });
